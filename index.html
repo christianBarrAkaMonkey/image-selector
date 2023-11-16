@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" width="400" height="400" id="character-image" alt="character-select-image" />
+<select name="image-choice" id="image-select">
+  <option value="dkIce" selected disabled>Select an image</option>
+  <option value="peach-Pink">princess peach pink</option>
+  <option value="peach-Fire">princess peach fire</option>
+  <option value="peach-Wedding">princess peach wedding</option>
+  <option value="kagura-bachi">best man</option>
+  <option value="emoji-kun">Katemoji</option>
+  <option value="meow-shocked">black cat</option>
+  <option value="shimpy">shimp</option>
+  <option value="meow-black">shocked cat</option>
+</select>
+<audio id="character-audio" controls>
+  <source src="" type="audio/ogg">
+  Your browser does not support mp3 audio
+</audio>
+    <script>
+        const imageSelect = document.getElementById("image-select");
+const characterImg = document.getElementById("character-image");
+const characterAudio = document.getElementById("character-audio");
+
+const shock =
+  "https://drive.google.com/uc?id=1AeCyN3waw2_HBf7NXRhEasDQt1ajRvuZ";
+const kagu = "https://drive.google.com/uc?id=1dLkl01ZhhPtcrp4owLIvzfdjxDw6iE9r";
+const freddy =
+  "https://drive.google.com/uc?id=1znpiZlj0S5qcCKBNfgdAJTqGE7DLKlGb";
+const scream =
+  "https://drive.google.com/uc?id=1L656eUpYlauQzOzgeoyuxjxdVC6HQbjf";
+const holy = "";
+const black =
+  "https://drive.google.com/uc?export=view&id=1Bk233Rk3AjKZVU2XZhtHvxNr_i9pdh8l";
+const shimp =
+  "https://drive.google.com/uc?export=view&id=1C4kpcb6OrBSl0T-FSpzzUjQ8wXzTHLqW";
+const shocked =
+  "https://drive.google.com/uc?export=view&id=1BcbicQRD-c63ot7XqTslaanivPyRAjXg";
+const emoji =
+  "https://drive.google.com/uc?export=view&id=1C7lz6iLA476aAsWTDH-wsaGO21XyE_Bm";
+const kagura =
+  "https://drive.google.com/uc?export=view&id=1yhPkFs3CbtCCVTfMRYNLYVKLx7OC4pPK";
+const marioRaccoonSrc =
+  "https://drive.google.com/uc?export=view&id=1Zehno27FMtG5hDd-TyFRky9wyv53lcHj";
+const marioCatSrc =
+  "https://drive.google.com/uc?export=view&id=1ZgigMQZ1CmJVYNhZ6vaz7eiKk9ZjfNlY";
+const marioAstroSrc =
+  "https://drive.google.com/uc?export=view&id=1ZpeukvmCIX8dy_2md0zDO8rkKZoLHfRT";
+const peachWeddingSrc =
+  "https://drive.google.com/uc?export=view&id=1_2ZQiL4XlmPUI4UEW2fqvRFk4078cErK";
+const peachPinkSrc =
+  "https://i.pinimg.com/originals/d2/32/4c/d2324c42d1226c6a8e34c0e053d04c39.gif";
+const peachFireSrc =
+  "https://drive.google.com/uc?export=view&id=1_HjCzHSVvQadyuzQeNqCncP8ULKVBtWj";
+const dkIceSrc =
+  "https://drive.google.com/uc?export=view&id=1_Z1aNb5oK-MqI3hmqF_-Ba4tPWjkhAtD";
+const dkFireSrc =
+  "https://drive.google.com/uc?export=view&id=1_bE8cmnBAj1hYNmV_SRnun8NpDZCOMHF";
+const dkBlackSrc =
+  "https://drive.google.com/uc?export=view&id=1_f3Xb2c5vmEXk4l4XEs3RvhQONNxdVpx";
+
+const characterSelectSrc =
+  "https://drive.google.com/uc?export=download&id=1ayfmqbm6-Ab2ws71xBS2SFHoGNdBJNOE";
+
+characterImg.src = dkIceSrc;
+
+imageSelect.addEventListener("change", function () {
+  let choice = this.value;
+  console.log(choice);
+  if (choice === "kagura-bachi") {
+    characterImg.src = kagura;
+    characterAudio.src = kagu;
+    characterAudio.play();
+  } else if (choice === "peach-Pink") {
+    characterImg.src = peachPinkSrc;
+  } else if (choice === "peach-Fire") {
+    characterImg.src = peachFireSrc;
+  } else if (choice === "peach-Wedding") {
+    characterImg.src = peachWeddingSrc;
+  } else if (choice === "emoji-kun") {
+    characterImg.src = emoji;
+  } else if (choice === "meow-shocked") {
+    characterImg.src = shocked;
+    characterAudio.src = scream;
+    characterAudio.play();
+  } else if (choice === "shimpy") {
+    characterImg.src = shimp;
+    characterAudio.src = freddy;
+    characterAudio.play();
+  } else if (choice === "meow-black") {
+    characterImg.src = black;
+    characterAudio.src = shock;
+    characterAudio.play();
+  }
+});
+
+    </script>
+</body>
+</html>
